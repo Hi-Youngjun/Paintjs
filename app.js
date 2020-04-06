@@ -37,8 +37,11 @@ function onMouseMove(event) {
         ctx.beginPath();
         ctx.moveTo(x,y);
     } else {
-        ctx.lineTo(x,y);
-        ctx.stroke();
+        if(!fill)
+        {
+            ctx.lineTo(x,y);
+            ctx.stroke();
+        }
     }
 }
 
